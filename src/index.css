@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ff605e;
+  background-color: #262423;
+  background: url("./assets/minecraft.png") center/cover no-repeat fixed #262423;
+}
+
+.app {
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+h1 {
+  font-family: inherit;
+  text-align: center;
+  color: #ffc42b;
+  font-size: 6rem;
+  padding: 3rem 0 1rem;
+}
+
+h1 {
+  animation: glow 0.15s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 3px #ffc42b, 0 0 6px #ff9f1a, 0 0 10px #ff6600;
+  }
+  to {
+    text-shadow: 0 0 7px #ffeb3b, 0 0 15px #ffc42b, 0 0 30px #ff6600;
+  }
+}
+
+.add-form {
+  background-color: rgba(22, 7, 1, 1);
+  border: 7px solid rgba(89, 24, 8, 1);
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.add-form div {
+  margin: 1rem 0;
+}
+
+.add-form div select {
+  margin-right: 1rem;
+}
+
+select,
+input {
+  font-family: inherit;
+  background-color: #171615;
+  color: #f8f5f4;
+  border-top: 3px solid #000000;
+  border-radius: 0;
+  padding: 0.5rem 0.8rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+button {
+  background-color: #6cc349;
+  color: #f8f5f4;
+  font-family: inherit;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.05s ease, box-shadow 0.05s ease;
+  box-shadow: 0 4px #3e8e41;
+}
+
+button:hover {
+  background-color: #52a535;
+  transform: translateY(-1px);
+  box-shadow: 0 5px #3e8e41;
+}
+
+button:active {
+  background-color: #52a535;
+  transform: translateY(2px);
+  box-shadow: 0 2px #3e8e41;
+}
+
+.list {
+  background-color: rgba(22, 7, 1, 1);
+  border: 7px solid rgba(89, 24, 8, 1);
+  padding: 2.3rem 0 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 3.2rem;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.list ul {
+  list-style: none;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -1rem;
+}
+
+.list li {
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  /* gap: 2rem; */
+}
+
+.list input[type="checkbox"] {
+  height: 3rem;
+  width: 3rem;
+  accent-color: #a0e081;
+  margin-right: 1.3rem;
+}
+
+.list li button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 2.6rem;
+  padding: 0;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(182, 80, 43, 1);
+  margin-left: 1rem;
+  box-shadow: 0 4px rgba(147, 66, 37, 1);
+  transition: transform 0.05s ease, box-shadow 0.05s ease;
+}
+
+.list li button:hover {
+  background-color: rgba(169, 74, 40, 1);
+  transform: translateY(-1px);
+  box-shadow: 0 5px rgba(147, 66, 37, 1);
+}
+
+.list li button:active {
+  background-color: rgba(169, 74, 40, 1);
+  transform: translateY(2px);
+  box-shadow: 0 2px rgba(147, 66, 37, 1);
+}
+
+.actions {
+  background-color: rgba(22, 7, 1, 1);
+  border: 7px solid rgba(89, 24, 8, 1);
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.actions button,
+.actions select {
+  padding: 0.8rem 2.4rem;
+  font-size: 2rem;
+  margin: 0 0.8rem;
+}
+
+.stats {
+  background-color: rgba(22, 7, 1, 1);
+  border: 7px solid rgba(89, 24, 8, 1);
+  color: #ffc42b;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 2rem;
+}
+
+@media (min-width: 319px) and (max-width: 480px) {
+  html {
+    font-size: 30%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1200px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media (min-width: 1601px) {
+  html {
+    font-size: 100%;
+  }
+}
